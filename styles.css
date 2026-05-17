@@ -68,12 +68,23 @@ textarea:focus {
 input,
 select {
   min-height: 40px;
+  max-width: 100%;
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 8px 10px;
   color: var(--ink);
   background: var(--surface);
   outline: none;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+select {
+  width: 100%;
+  min-width: 0;
+}
+
+select {
+  text-overflow: ellipsis;
 }
 
 input:focus,
@@ -240,6 +251,7 @@ select:focus {
 .field-label {
   display: grid;
   gap: 7px;
+  min-width: 0;
   margin-top: 12px;
   color: var(--muted);
   font-size: 0.9rem;
@@ -846,8 +858,19 @@ select:focus {
 
 .corpus-grid {
   display: grid;
-  grid-template-columns: minmax(240px, 0.7fr) minmax(320px, 1.3fr);
+  grid-template-columns: minmax(260px, 0.85fr) minmax(0, 1.35fr);
   gap: 16px;
+  align-items: start;
+}
+
+.corpus-source-panel,
+.corpus-input-panel {
+  min-width: 0;
+  align-content: start;
+}
+
+.corpus-input-panel textarea {
+  min-height: 320px;
 }
 
 .public-domain-pack {
@@ -860,6 +883,13 @@ select:focus {
 
 .public-domain-pack .section-heading {
   align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.public-domain-pack .section-heading h3 {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .public-domain-pack h3 {
@@ -880,6 +910,10 @@ select:focus {
 
 .public-domain-pack a:hover {
   text-decoration: underline;
+}
+
+.public-domain-pack .primary-button {
+  width: 100%;
 }
 
 .corpus-output-body {
@@ -1017,7 +1051,6 @@ select:focus {
   }
 
   .topbar,
-  .workspace,
   .voice-row,
   .speaking-tools,
   .corpus-grid,
@@ -1036,6 +1069,19 @@ select:focus {
 
   .skill-tabs {
     top: 8px;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 980px) {
+  .workspace {
+    grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 720px) {
+  .workspace {
+    grid-template-columns: 1fr;
   }
 }
 

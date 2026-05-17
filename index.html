@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Caty, practice Italian</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=corpus-layout-fix-1" />
   </head>
   <body>
     <div class="app-shell">
@@ -261,7 +261,7 @@
             </div>
 
             <section class="corpus-grid">
-              <div class="mini-panel">
+              <div class="mini-panel corpus-source-panel">
                 <h3>来源</h3>
                 <label class="field-label">
                   类型
@@ -280,18 +280,18 @@
                 <div class="public-domain-pack">
                   <div class="section-heading">
                     <h3>公版语料包</h3>
-                    <button class="ghost-button small-button" id="randomPublicDomainBtn" type="button">随机</button>
+                    <button class="ghost-button small-button" id="randomPublicDomainBtn" type="button">随机本书段落</button>
                   </div>
                   <label class="field-label">
-                    选择片段
+                    选择作品
                     <select id="publicDomainSelect"></select>
                   </label>
                   <p class="muted" id="publicDomainMeta"></p>
-                  <button class="primary-button" id="loadPublicDomainBtn" type="button">载入并生成练习</button>
+                  <button class="primary-button" id="loadPublicDomainBtn" type="button">载入今日段落</button>
                 </div>
               </div>
 
-              <div class="mini-panel">
+              <div class="mini-panel corpus-input-panel">
                 <h3>片段</h3>
                 <textarea id="corpusText" rows="10" placeholder="粘贴 80-250 词意大利语片段"></textarea>
                 <div class="accent-toolbar" data-for="corpusText"></div>
@@ -368,6 +368,7 @@
       </main>
     </div>
 
-    <script src="app.js?v=corpus-answers-lookup" defer></script>
+    <script src="gutenberg-cache.js?v=paragraph-cache-1" defer></script>
+    <script src="app.js?v=difficulty-corpus-fix-1" defer></script>
   </body>
 </html>

@@ -605,7 +605,7 @@ const PUBLIC_DOMAIN_CORPUS = [
     level: "A2+/B1",
     type: "letteratura",
     sourceName: "Project Gutenberg",
-    sourceUrl: "https://www.gutenberg.org/ebooks/19517",
+    sourceUrl: "https://www.gutenberg.org/ebooks/52484",
     note: "开头很口语化，适合练叙事语气和直接引语。",
     text: "C'era una volta... Un re! diranno subito i miei piccoli lettori. No, ragazzi, avete sbagliato. C'era una volta un pezzo di legno. Non era un legno di lusso, ma un semplice pezzo da catasta, di quelli che d'inverno si mettono nelle stufe e nei caminetti per accendere il fuoco e per riscaldare le stanze."
   },
@@ -628,8 +628,8 @@ const PUBLIC_DOMAIN_CORPUS = [
     year: "1886",
     level: "B1",
     type: "letteratura",
-    sourceName: "Project Gutenberg",
-    sourceUrl: "https://www.gutenberg.org/ebooks/24082",
+    sourceName: "Wikisource",
+    sourceUrl: "https://it.wikisource.org/wiki/Cuore",
     note: "日记体、情绪清楚，适合练过去时和心理描写。",
     text: "Oggi primo giorno di scuola. Passarono come un sogno quei tre mesi di vacanza in campagna! Mia madre mi condusse questa mattina alla sezione Baretti a farmi iscrivere per la terza elementare: io pensavo alla campagna e andavo di mala voglia."
   },
@@ -653,11 +653,126 @@ const PUBLIC_DOMAIN_CORPUS = [
     level: "B2+",
     type: "letteratura",
     sourceName: "Wikisource",
-    sourceUrl: "https://it.wikisource.org/wiki/Dialogo_della_Natura_e_di_un_Islandese",
+    sourceUrl: "https://it.wikisource.org/wiki/Operette_morali/Dialogo_della_Natura_e_di_un_Islandese",
     note: "哲学对话难度高，适合练抽象名词和反问式表达。",
     text: "Voglio che tu sappia che non sono stata fatta per cagione vostra, né per vostro beneficio. E se io vi offendo in qualunque modo e con qual si sia mezzo, io non me n'avveggo, se non rarissime volte: come, ordinariamente, se io vi diletto o vi benefico, io non lo so."
+  },
+  {
+    id: "dante-inferno-i",
+    author: "Dante Alighieri",
+    title: "Inferno, Canto I",
+    year: "1321",
+    level: "B2+",
+    type: "letteratura",
+    sourceName: "Wikisource",
+    sourceUrl: "https://it.wikisource.org/wiki/Divina_Commedia/Inferno/Canto_I",
+    note: "古典诗歌难度很高，适合练意象、隐喻和倒装。",
+    text: "Nel mezzo del cammin di nostra vita mi ritrovai per una selva oscura, ché la diritta via era smarrita. Ahi quanto a dir qual era è cosa dura esta selva selvaggia e aspra e forte, che nel pensier rinova la paura!"
+  },
+  {
+    id: "machiavelli-principe-xviii",
+    author: "Niccolò Machiavelli",
+    title: "Il Principe, capitolo XVIII",
+    year: "1532",
+    level: "B2+",
+    type: "letteratura",
+    sourceName: "Wikisource",
+    sourceUrl: "https://it.wikisource.org/wiki/Il_Principe/Capitolo_XVIII",
+    note: "政治散文，适合练抽象论证和 concessione。",
+    text: "Quanto sia laudabile in uno principe mantenere la fede e vivere con integrità e non con astuzia, ciascuno lo intende; nondimanco si vede per esperienza ne' nostri tempi quelli principi aver fatto gran cose che della fede hanno tenuto poco conto."
+  },
+  {
+    id: "svevo-zeno-prefazione",
+    author: "Italo Svevo",
+    title: "La coscienza di Zeno, prefazione",
+    year: "1923",
+    level: "B2",
+    type: "letteratura",
+    sourceName: "Wikisource",
+    sourceUrl: "https://it.wikisource.org/wiki/La_coscienza_di_Zeno/Prefazione",
+    note: "现代小说语气更近，适合练讽刺、自我叙述和心理词汇。",
+    text: "Io sono il dottore di cui in questa novella si parla talvolta con parole poco lusinghiere. Chi di psico-analisi s'intende, sa dove piazzare l'antipatia che il paziente mi dedica."
+  },
+  {
+    id: "pirandello-treno",
+    author: "Luigi Pirandello",
+    title: "Il treno ha fischiato",
+    year: "1914",
+    level: "B2",
+    type: "letteratura",
+    sourceName: "Wikisource",
+    sourceUrl: "https://it.wikisource.org/wiki/Il_treno_ha_fischiato",
+    note: "短篇小说开头节奏强，适合练心理状态和间接叙述。",
+    text: "Il treno ha fischiato. E pareva che gli avesse squarciato e portato via d'un tratto la miseria di tutte quelle sue orribili angustie. Aveva sentito il fischio del treno nella notte."
   }
 ];
+
+const PUBLIC_DOMAIN_BOOK_DETAILS = {
+  "collodi-pinocchio-1883": {
+    startMarker: "C'era una volta",
+    fullTextUrls: [
+      "https://www.gutenberg.org/ebooks/52484.txt.utf-8",
+      "https://www.gutenberg.org/cache/epub/52484/pg52484.txt",
+      "https://www.gutenberg.org/files/52484/52484-0.txt"
+    ],
+    segments: [
+      "C'era una volta... Un re! diranno subito i miei piccoli lettori. No, ragazzi, avete sbagliato. C'era una volta un pezzo di legno. Non era un legno di lusso, ma un semplice pezzo da catasta, di quelli che d'inverno si mettono nelle stufe e nei caminetti per accendere il fuoco e per riscaldare le stanze.",
+      "Figuratevi come rimase quel buon vecchio di maestro Ciliegia! Girò gli occhi smarriti intorno alla stanza, per vedere di dove mai poteva essere uscita quella vocina; e non vide nessuno. Guardò sotto il banco, e nessuno; guardò dentro un armadio che stava sempre chiuso, e nessuno.",
+      "Allora prese subito l'ascia arrotata per cominciare a levargli la scorza e a digrossarlo; ma quando fu lì per lasciare andare la prima asciata, rimase col braccio sospeso in aria, perché sentì una vocina sottile sottile che disse raccomandandosi: Non mi picchiar tanto forte!"
+    ]
+  },
+  "manzoni-promessi-1840": {
+    startMarker: "CAPITOLO PRIMO.",
+    fullTextUrls: [
+      "https://www.gutenberg.org/ebooks/45334.txt.utf-8",
+      "https://www.gutenberg.org/cache/epub/45334/pg45334.txt",
+      "https://www.gutenberg.org/files/45334/45334-0.txt"
+    ],
+    segments: [
+      "Quel ramo del lago di Como, che volge a mezzogiorno, tra due catene non interrotte di monti, tutto a seni e a golfi, a seconda dello sporgere e del rientrare di quelli, vien, quasi a un tratto, a ristringersi, e a prender corso e figura di fiume.",
+      "Per una di queste stradicciole, tornava bel bello dalla passeggiata verso casa, sulla sera del giorno 7 novembre dell'anno 1628, don Abbondio, curato d'una delle terre accennate di sopra: il nome di questa, né il casato del personaggio, non si trovan nel manoscritto.",
+      "Il nostro manoscritto nota che la strada dell'iniquità è larga, ma che non è sempre comoda; e don Abbondio, che non era nato con un cuor di leone, se n'era accorto assai presto."
+    ]
+  },
+  "deamicis-cuore-1886": {
+    wikisourceTitle: "Cuore",
+    segments: [
+      "Oggi primo giorno di scuola. Passarono come un sogno quei tre mesi di vacanza in campagna! Mia madre mi condusse questa mattina alla sezione Baretti a farmi iscrivere per la terza elementare: io pensavo alla campagna e andavo di mala voglia.",
+      "Tutti e due i lati della strada formicolavano di ragazzi; le due botteghe di libraio erano affollate di padri e di madri che compravano cartelle, quaderni e penne, e davanti alla scuola s'accalcava tanta gente che il bidello e la guardia civica duravano fatica a tener sgombra la porta.",
+      "Il maestro ci guardava fisso, uno dopo l'altro, come per leggerci dentro; e mentre dettava, passeggiava fra i banchi, fermandosi qualche volta a osservare un quaderno o a correggere una posizione."
+    ]
+  },
+  "verga-rosso-malpelo-1880": {
+    wikisourceTitle: "Rosso Malpelo"
+  },
+  "leopardi-islandese-1827": {
+    wikisourceTitle: "Operette morali/Dialogo della Natura e di un Islandese"
+  },
+  "dante-inferno-i": {
+    wikisourceTitle: "Divina Commedia/Inferno/Canto I"
+  },
+  "machiavelli-principe-xviii": {
+    wikisourceTitle: "Il Principe/Capitolo XVIII"
+  },
+  "svevo-zeno-prefazione": {
+    wikisourceTitle: "La coscienza di Zeno/Prefazione"
+  },
+  "pirandello-treno": {
+    wikisourceTitle: "Il treno ha fischiato"
+  }
+};
+
+PUBLIC_DOMAIN_CORPUS.forEach((entry) => {
+  const details = PUBLIC_DOMAIN_BOOK_DETAILS[entry.id] || {};
+  const cachedSegments = globalThis.PROJECT_GUTENBERG_CACHE?.[entry.id];
+  entry.fullTextUrls = details.fullTextUrls || (details.fullTextUrl ? [details.fullTextUrl] : []);
+  entry.fullTextUrl = entry.fullTextUrls[0] || "";
+  entry.startMarker = details.startMarker || "";
+  entry.wikisourceTitle = details.wikisourceTitle || wikisourceTitleFromUrl(entry.sourceUrl);
+  entry.segments = cachedSegments?.length ? cachedSegments : details.segments || [entry.text];
+});
+
+const publicDomainTextCache = new Map();
 
 [
   ["daily", "food"],
@@ -1201,6 +1316,904 @@ READING_DIFFICULTY_PARAGRAPHS.forEach((paragraph, index) => {
   card.reading.paragraphs = [...card.reading.paragraphs, paragraph];
 });
 
+CARDS.forEach((card, index) => {
+  if (!card.level) card.level = index < 10 ? "A2" : "B1+";
+  if (!card.primaryTopic) card.primaryTopic = card.topics?.[0] || "daily";
+});
+
+const LEVEL_CONTENT = {
+  "A1+": {
+    label: "A1+",
+    grammar: "presente / c'è / mi piace",
+    listeningExtra: false,
+    readingLength: "breve",
+    writingTarget: "4-6 frasi semplici"
+  },
+  A2: {
+    label: "A2",
+    grammar: "presente + passato prossimo / perché / quando",
+    listeningExtra: false,
+    readingLength: "breve ma più connessa",
+    writingTarget: "5-7 frasi con perché"
+  },
+  "A2+": {
+    label: "A2+",
+    grammar: "passato prossimo / imperfetto leggero / mentre",
+    listeningExtra: true,
+    readingLength: "media",
+    writingTarget: "6-8 frasi con un contrasto"
+  },
+  B1: {
+    label: "B1",
+    grammar: "imperfetto / anche se / quindi",
+    listeningExtra: true,
+    readingLength: "media con opinione",
+    writingTarget: "8-10 frasi con esempi"
+  },
+  "B1+": {
+    label: "B1+",
+    grammar: "congiuntivo fisso / non solo... ma anche / tuttavia",
+    listeningExtra: true,
+    readingLength: "più densa",
+    writingTarget: "10-12 frasi con una tesi"
+  },
+  B2: {
+    label: "B2",
+    grammar: "periodi complessi / concessive / registro giornalistico",
+    listeningExtra: true,
+    readingLength: "articolo breve",
+    writingTarget: "un commento argomentato"
+  },
+  "B2+": {
+    label: "B2+",
+    grammar: "sfumature argomentative / ipotesi / lessico astratto",
+    listeningExtra: true,
+    readingLength: "articolo denso",
+    writingTarget: "un paragrafo critico"
+  }
+};
+
+const ADAPTIVE_TOPICS = [
+  {
+    key: "politics",
+    related: ["opinion", "world"],
+    labelZh: "政治社会",
+    themeIt: "Politica locale e fiducia",
+    setting: "Società · istituzioni · cittadinanza",
+    focus: ["fiducia", "decisioni pubbliche", "cittadini"],
+    place: "in molti comuni",
+    issue: "il rapporto tra cittadini e istituzioni",
+    issueChoice: "Il rapporto tra cittadini e istituzioni.",
+    actor: "Chiara",
+    other: "Lorenzo",
+    actorDesc: "una studentessa che segue la politica locale",
+    simpleObservation: "molte persone vogliono capire meglio le decisioni del Comune",
+    simpleReason: "tocca la vita quotidiana",
+    tension: "le decisioni pubbliche sembrano lontane, ma cambiano trasporti, scuole e quartieri",
+    example: "un incontro pubblico su autobus, sicurezza e spazi verdi",
+    proposal: "spiegare le scelte con parole più chiare",
+    proposalChoice: "Spiegare meglio le decisioni pubbliche.",
+    stakes: "senza informazioni chiare, la sfiducia cresce anche quando una misura potrebbe essere utile",
+    vocab: [
+      { it: "fiducia", zh: "信任", en: "trust", example: "La fiducia cresce con informazioni chiare.", exampleZh: "清楚的信息会增加信任。" },
+      { it: "istituzione", zh: "机构", en: "institution", example: "Un'istituzione deve ascoltare i cittadini.", exampleZh: "机构应该倾听市民。" },
+      { it: "decisione", zh: "决定", en: "decision", example: "La decisione riguarda tutto il quartiere.", exampleZh: "这个决定关系到整个街区。" },
+      { it: "quartiere", zh: "街区", en: "neighborhood", example: "Il quartiere chiede più servizi.", exampleZh: "这个街区要求更多服务。" },
+      { it: "partecipare", zh: "参与", en: "to participate", example: "Vorrei partecipare all'incontro.", exampleZh: "我想参加这次会议。" },
+      { it: "trasparente", zh: "透明的", en: "transparent", example: "Una scelta trasparente è più facile da accettare.", exampleZh: "透明的选择更容易被接受。" }
+    ]
+  },
+  {
+    key: "world",
+    related: ["politics", "economy"],
+    labelZh: "国际",
+    themeIt: "Notizie dal mondo e vita quotidiana",
+    setting: "Mondo · società · media",
+    focus: ["notizie", "confini", "vita quotidiana"],
+    place: "nei giornali internazionali",
+    issue: "il modo in cui una crisi lontana entra nella vita delle persone",
+    issueChoice: "Una crisi lontana che ha effetti quotidiani.",
+    actor: "Marta",
+    other: "Samir",
+    actorDesc: "una lettrice che confronta più fonti",
+    simpleObservation: "una notizia lontana può cambiare prezzi, viaggi e conversazioni",
+    simpleReason: "il mondo è più collegato di quanto sembri",
+    tension: "una storia sembra distante, ma produce conseguenze molto concrete",
+    example: "una crisi energetica raccontata attraverso famiglie, scuole e imprese",
+    proposal: "leggere almeno due fonti prima di farsi un'opinione",
+    proposalChoice: "Confrontare più fonti.",
+    stakes: "senza contesto, una notizia internazionale diventa solo paura o slogan",
+    vocab: [
+      { it: "confine", zh: "边界", en: "border", example: "Il confine è al centro della notizia.", exampleZh: "边界是这条新闻的核心。" },
+      { it: "fonte", zh: "来源", en: "source", example: "Controllo sempre la fonte.", exampleZh: "我总是检查来源。" },
+      { it: "crisi", zh: "危机", en: "crisis", example: "La crisi ha effetti sui prezzi.", exampleZh: "这场危机会影响价格。" },
+      { it: "conseguenza", zh: "后果", en: "consequence", example: "Ogni scelta ha una conseguenza.", exampleZh: "每个选择都有后果。" },
+      { it: "contesto", zh: "背景", en: "context", example: "Senza contesto è difficile capire.", exampleZh: "没有背景就很难理解。" },
+      { it: "aggiornamento", zh: "更新", en: "update", example: "Aspetto un aggiornamento affidabile.", exampleZh: "我等待可靠的更新。" }
+    ]
+  },
+  {
+    key: "economy",
+    related: ["work", "politics"],
+    labelZh: "经济工作",
+    themeIt: "Lavoro, prezzi e scelte",
+    setting: "Economia · lavoro · consumi",
+    focus: ["prezzi", "lavoro", "scelte"],
+    place: "nelle conversazioni sul lavoro",
+    issue: "l'aumento dei prezzi e il modo in cui cambia le abitudini",
+    issueChoice: "L'aumento dei prezzi e le abitudini quotidiane.",
+    actor: "Paolo",
+    other: "Elena",
+    actorDesc: "un impiegato che controlla meglio le spese",
+    simpleObservation: "fare la spesa richiede più attenzione di prima",
+    simpleReason: "riguarda soldi, tempo e priorità",
+    tension: "tutti parlano di risparmio, ma non tutti hanno lo stesso margine di scelta",
+    example: "una famiglia che cambia supermercato e rinuncia ad alcuni acquisti",
+    proposal: "distinguere tra bisogni reali e acquisti automatici",
+    proposalChoice: "Distinguere bisogni reali e acquisti automatici.",
+    stakes: "quando i prezzi salgono, anche una piccola decisione può pesare sul bilancio",
+    vocab: [
+      { it: "stipendio", zh: "工资", en: "salary", example: "Lo stipendio arriva a fine mese.", exampleZh: "工资月底到账。" },
+      { it: "spesa", zh: "购物/开销", en: "shopping / expense", example: "La spesa è aumentata.", exampleZh: "开销增加了。" },
+      { it: "risparmiare", zh: "省钱", en: "to save money", example: "Cerco di risparmiare senza rinunciare a tutto.", exampleZh: "我努力省钱但不是什么都放弃。" },
+      { it: "prezzo", zh: "价格", en: "price", example: "Il prezzo cambia ogni settimana.", exampleZh: "价格每周都在变。" },
+      { it: "bilancio", zh: "预算/收支", en: "budget", example: "Controllo il bilancio familiare.", exampleZh: "我检查家庭预算。" },
+      { it: "priorità", zh: "优先事项", en: "priority", example: "La priorità è pagare l'affitto.", exampleZh: "优先事项是付房租。" }
+    ]
+  },
+  {
+    key: "tech",
+    related: ["science", "social"],
+    labelZh: "科技",
+    themeIt: "Tecnologia e attenzione",
+    setting: "Tecnologia · abitudini · futuro",
+    focus: ["algoritmi", "attenzione", "strumenti"],
+    place: "sulle piattaforme digitali",
+    issue: "il rapporto tra algoritmi e attenzione",
+    issueChoice: "Il rapporto tra algoritmi e attenzione.",
+    actor: "Nico",
+    other: "Giulia",
+    actorDesc: "un utente che prova a usare meglio il telefono",
+    simpleObservation: "le notifiche interrompono spesso lo studio",
+    simpleReason: "influenza il modo in cui lavoriamo e impariamo",
+    tension: "uno strumento utile può diventare una distrazione continua",
+    example: "un'app che suggerisce contenuti sempre più simili",
+    proposal: "decidere prima che cosa cercare online",
+    proposalChoice: "Usare la tecnologia con più intenzione.",
+    stakes: "se non scegliamo noi il ritmo, lo sceglie la piattaforma al posto nostro",
+    vocab: [
+      { it: "algoritmo", zh: "算法", en: "algorithm", example: "L'algoritmo osserva le nostre reazioni.", exampleZh: "算法观察我们的反应。" },
+      { it: "notifica", zh: "通知", en: "notification", example: "Disattivo le notifiche quando studio.", exampleZh: "我学习时关闭通知。" },
+      { it: "strumento", zh: "工具", en: "tool", example: "La tecnologia è uno strumento, non un fine.", exampleZh: "科技是工具，不是目的。" },
+      { it: "schermo", zh: "屏幕", en: "screen", example: "Passo troppe ore davanti allo schermo.", exampleZh: "我在屏幕前待太久。" },
+      { it: "distrazione", zh: "分心", en: "distraction", example: "La distrazione arriva in un secondo.", exampleZh: "分心一秒钟就来了。" },
+      { it: "impostazione", zh: "设置", en: "setting", example: "Cambio le impostazioni dell'app.", exampleZh: "我更改应用设置。" }
+    ]
+  },
+  {
+    key: "science",
+    related: ["health", "environment"],
+    labelZh: "科学",
+    themeIt: "Scienza spiegata bene",
+    setting: "Scienza · ricerca · divulgazione",
+    focus: ["ricerca", "prove", "domande"],
+    place: "in un articolo di divulgazione",
+    issue: "il modo in cui la ricerca scientifica viene raccontata",
+    issueChoice: "Come viene raccontata la ricerca scientifica.",
+    actor: "Irene",
+    other: "Tommaso",
+    actorDesc: "una studentessa che legge articoli scientifici semplici",
+    simpleObservation: "un titolo può essere più forte dei dati",
+    simpleReason: "aiuta a distinguere fatti e opinioni",
+    tension: "la scienza cerca risposte, ma spesso procede per dubbi e correzioni",
+    example: "uno studio presentato dai media come se fosse una verità definitiva",
+    proposal: "guardare metodo, campione e limiti dello studio",
+    proposalChoice: "Guardare metodo e limiti dello studio.",
+    stakes: "senza prudenza, una scoperta diventa facilmente una promessa esagerata",
+    vocab: [
+      { it: "ricerca", zh: "研究", en: "research", example: "La ricerca richiede tempo.", exampleZh: "研究需要时间。" },
+      { it: "prova", zh: "证据", en: "evidence", example: "Serve una prova più solida.", exampleZh: "需要更可靠的证据。" },
+      { it: "campione", zh: "样本", en: "sample", example: "Il campione è troppo piccolo.", exampleZh: "样本太小。" },
+      { it: "ipotesi", zh: "假设", en: "hypothesis", example: "L'ipotesi va verificata.", exampleZh: "假设需要验证。" },
+      { it: "risultato", zh: "结果", en: "result", example: "Il risultato è interessante ma parziale.", exampleZh: "结果有趣但不完整。" },
+      { it: "divulgazione", zh: "科普", en: "popular science", example: "La divulgazione deve essere chiara.", exampleZh: "科普应该清楚。" }
+    ]
+  },
+  {
+    key: "environment",
+    related: ["science", "politics"],
+    labelZh: "环境",
+    themeIt: "Clima e città",
+    setting: "Ambiente · città · salute",
+    focus: ["clima", "spazi pubblici", "salute"],
+    place: "nei quartieri più caldi",
+    issue: "il caldo urbano e la mancanza di verde",
+    issueChoice: "Il caldo urbano e la mancanza di verde.",
+    actor: "Rosa",
+    other: "Davide",
+    actorDesc: "una residente che osserva il suo quartiere",
+    simpleObservation: "in estate alcune piazze restano vuote",
+    simpleReason: "condiziona il modo in cui le persone usano la città",
+    tension: "piantare alberi sembra una scelta estetica, ma riguarda anche la salute",
+    example: "una strada senza ombra dove gli anziani camminano poco",
+    proposal: "creare più ombra e spazi freschi",
+    proposalChoice: "Creare più ombra e spazi freschi.",
+    stakes: "il clima non colpisce tutti nello stesso modo, perché alcune persone sono più esposte",
+    vocab: [
+      { it: "ombra", zh: "阴凉", en: "shade", example: "Cerco una panchina all'ombra.", exampleZh: "我找一张阴凉处的长椅。" },
+      { it: "calore", zh: "热量", en: "heat", example: "Il calore resta tra i palazzi.", exampleZh: "热量停留在楼房之间。" },
+      { it: "verde", zh: "绿地", en: "green space", example: "Il quartiere ha poco verde.", exampleZh: "这个街区绿地很少。" },
+      { it: "fontana", zh: "喷泉", en: "fountain", example: "Una fontana rende la piazza più vivibile.", exampleZh: "喷泉让广场更宜居。" },
+      { it: "fragile", zh: "脆弱的", en: "fragile", example: "Le persone fragili soffrono di più il caldo.", exampleZh: "脆弱人群更受高温影响。" },
+      { it: "adattarsi", zh: "适应", en: "to adapt", example: "La città deve adattarsi al clima.", exampleZh: "城市必须适应气候。" }
+    ]
+  },
+  {
+    key: "culture",
+    related: ["opinion", "social"],
+    labelZh: "文化书影",
+    themeIt: "Libri, film e dibattito",
+    setting: "Cultura · letteratura · cinema",
+    focus: ["storie", "recensioni", "dibattito"],
+    place: "nei festival e sui giornali culturali",
+    issue: "il modo in cui un libro o un film fa discutere",
+    issueChoice: "Come un libro o un film fa discutere.",
+    actor: "Elena",
+    other: "Riccardo",
+    actorDesc: "una lettrice che ama confrontare opinioni diverse",
+    simpleObservation: "una storia può piacere e disturbare nello stesso tempo",
+    simpleReason: "tocca memoria, identità e gusto personale",
+    tension: "un'opera divide il pubblico proprio quando non lascia indifferenti",
+    example: "un romanzo premiato che molti leggono in modo opposto",
+    proposal: "distinguere tra gusto personale e valore dell'opera",
+    proposalChoice: "Distinguere gusto personale e valore dell'opera.",
+    stakes: "parlare di cultura significa anche imparare a sostenere un'opinione",
+    vocab: [
+      { it: "romanzo", zh: "小说", en: "novel", example: "Il romanzo ha una voce forte.", exampleZh: "这部小说有很强的叙述声音。" },
+      { it: "recensione", zh: "评论", en: "review", example: "Leggo una recensione prima del film.", exampleZh: "看电影前我读一篇评论。" },
+      { it: "trama", zh: "情节", en: "plot", example: "La trama sembra semplice.", exampleZh: "情节看起来简单。" },
+      { it: "personaggio", zh: "人物", en: "character", example: "Il personaggio cambia molto.", exampleZh: "人物变化很大。" },
+      { it: "premio", zh: "奖项", en: "prize", example: "Il premio ha aumentato le vendite.", exampleZh: "奖项提高了销量。" },
+      { it: "dibattito", zh: "讨论/辩论", en: "debate", example: "Il film ha acceso un dibattito.", exampleZh: "这部电影引发了讨论。" }
+    ]
+  },
+  {
+    key: "opinion",
+    related: ["politics", "culture"],
+    labelZh: "观点评论",
+    themeIt: "Opinioni e argomentazione",
+    setting: "Opinione · media · linguaggio",
+    focus: ["tesi", "argomenti", "sfumature"],
+    place: "nelle pagine di commento",
+    issue: "la differenza tra opinione forte e argomento solido",
+    issueChoice: "La differenza tra opinione forte e argomento solido.",
+    actor: "Andrea",
+    other: "Lia",
+    actorDesc: "un lettore che prova a scrivere commenti più precisi",
+    simpleObservation: "dire 'secondo me' non basta per convincere",
+    simpleReason: "serve a parlare in modo più chiaro",
+    tension: "un commento può sembrare brillante ma restare povero di prove",
+    example: "un editoriale che parte da un fatto e arriva a una tesi",
+    proposal: "separare fatti, interpretazioni e giudizi personali",
+    proposalChoice: "Separare fatti, interpretazioni e giudizi.",
+    stakes: "una buona opinione non elimina i dubbi, ma li organizza",
+    vocab: [
+      { it: "tesi", zh: "论点", en: "thesis", example: "La tesi è chiara.", exampleZh: "论点很清楚。" },
+      { it: "argomento", zh: "论据", en: "argument", example: "Serve un argomento più concreto.", exampleZh: "需要一个更具体的论据。" },
+      { it: "giudizio", zh: "判断", en: "judgment", example: "Il giudizio è troppo rapido.", exampleZh: "判断太快了。" },
+      { it: "sfumatura", zh: "细微差别", en: "nuance", example: "Manca una sfumatura importante.", exampleZh: "缺少一个重要的细微差别。" },
+      { it: "convincere", zh: "说服", en: "to convince", example: "Un esempio può convincere più di uno slogan.", exampleZh: "一个例子比口号更能说服人。" },
+      { it: "contraddizione", zh: "矛盾", en: "contradiction", example: "Nel testo c'è una contraddizione.", exampleZh: "文中有一个矛盾。" }
+    ]
+  },
+  {
+    key: "sport",
+    related: ["health", "social"],
+    labelZh: "体育",
+    themeIt: "Sport, corpo e comunità",
+    setting: "Sport · salute · società",
+    focus: ["allenamento", "squadra", "motivazione"],
+    place: "in una palestra di quartiere",
+    issue: "il ruolo dello sport nella vita quotidiana",
+    issueChoice: "Il ruolo dello sport nella vita quotidiana.",
+    actor: "Gabriele",
+    other: "Sara",
+    actorDesc: "un corridore non professionista",
+    simpleObservation: "allenarsi con altre persone aiuta a essere costanti",
+    simpleReason: "unisce salute, disciplina e relazioni",
+    tension: "lo sport promette benessere, ma può diventare pressione se conta solo il risultato",
+    example: "un gruppo che corre insieme senza preparare una gara",
+    proposal: "misurare i progressi senza confrontarsi sempre con gli altri",
+    proposalChoice: "Misurare i progressi senza confrontarsi troppo.",
+    stakes: "il movimento funziona meglio quando resta sostenibile nel tempo",
+    vocab: [
+      { it: "allenamento", zh: "训练", en: "training", example: "L'allenamento dura quaranta minuti.", exampleZh: "训练持续四十分钟。" },
+      { it: "squadra", zh: "队伍", en: "team", example: "La squadra si sostiene.", exampleZh: "队伍互相支持。" },
+      { it: "gara", zh: "比赛", en: "race / competition", example: "Non preparo una gara.", exampleZh: "我没有准备比赛。" },
+      { it: "resistenza", zh: "耐力", en: "endurance", example: "La resistenza cresce piano.", exampleZh: "耐力慢慢提升。" },
+      { it: "risultato", zh: "结果", en: "result", example: "Il risultato non è tutto.", exampleZh: "结果不是全部。" },
+      { it: "costanza", zh: "坚持", en: "consistency", example: "La costanza conta più della velocità.", exampleZh: "坚持比速度更重要。" }
+    ]
+  },
+  {
+    key: "food",
+    related: ["culture", "daily"],
+    labelZh: "食物",
+    themeIt: "Cibo, memoria e abitudini",
+    setting: "Cibo · famiglia · cultura",
+    focus: ["ricette", "mercato", "memoria"],
+    place: "tra mercato e cucina",
+    issue: "il rapporto tra cibo, memoria e identità",
+    issueChoice: "Il rapporto tra cibo, memoria e identità.",
+    actor: "Lin",
+    other: "Marco",
+    actorDesc: "una persona che impara a cucinare piatti italiani",
+    simpleObservation: "una ricetta racconta spesso una storia di famiglia",
+    simpleReason: "mangiare è anche ricordare e condividere",
+    tension: "una tradizione può cambiare senza perdere significato",
+    example: "una ricetta della nonna adattata agli ingredienti disponibili",
+    proposal: "chiedere la storia di un piatto, non solo gli ingredienti",
+    proposalChoice: "Chiedere anche la storia del piatto.",
+    stakes: "il cibo diventa linguaggio quando permette di parlare di casa, tempo e relazioni",
+    vocab: [
+      { it: "ricetta", zh: "食谱", en: "recipe", example: "Seguo una ricetta semplice.", exampleZh: "我按一个简单食谱做。" },
+      { it: "ingrediente", zh: "食材", en: "ingredient", example: "Manca un ingrediente.", exampleZh: "少了一种食材。" },
+      { it: "sapore", zh: "味道", en: "flavor", example: "Il sapore mi ricorda casa.", exampleZh: "这个味道让我想起家。" },
+      { it: "tradizione", zh: "传统", en: "tradition", example: "La tradizione cambia con le persone.", exampleZh: "传统随着人而变化。" },
+      { it: "condividere", zh: "分享", en: "to share", example: "Condivido la cena con gli amici.", exampleZh: "我和朋友分享晚餐。" },
+      { it: "avanzo", zh: "剩菜", en: "leftover", example: "Uso gli avanzi per il pranzo.", exampleZh: "我用剩菜做午饭。" }
+    ]
+  },
+  {
+    key: "travel",
+    related: ["world", "culture"],
+    labelZh: "旅行城市",
+    themeIt: "Viaggiare senza correre",
+    setting: "Viaggi · città · osservazione",
+    focus: ["itinerario", "ritmo", "luoghi"],
+    place: "in una città visitata per poco tempo",
+    issue: "il modo di viaggiare senza trasformare tutto in una lista",
+    issueChoice: "Viaggiare senza trasformare tutto in una lista.",
+    actor: "Giulia",
+    other: "Luca",
+    actorDesc: "una viaggiatrice che preferisce osservare con calma",
+    simpleObservation: "vedere meno cose può lasciare ricordi più chiari",
+    simpleReason: "un viaggio non è solo una lista di monumenti",
+    tension: "il desiderio di vedere tutto spesso impedisce di capire un luogo",
+    example: "una giornata in cui si sceglie un quartiere invece di cinque musei",
+    proposal: "scegliere un ritmo e lasciare spazio agli incontri",
+    proposalChoice: "Scegliere un ritmo più lento.",
+    stakes: "viaggiare bene significa anche accettare che qualcosa resti fuori",
+    vocab: [
+      { it: "itinerario", zh: "行程", en: "itinerary", example: "L'itinerario è flessibile.", exampleZh: "行程是灵活的。" },
+      { it: "monumento", zh: "纪念建筑", en: "monument", example: "Il monumento è vicino alla piazza.", exampleZh: "纪念建筑在广场附近。" },
+      { it: "vicolo", zh: "小巷", en: "alley", example: "Mi perdo in un vicolo tranquillo.", exampleZh: "我在一条安静小巷里迷路。" },
+      { it: "ritmo", zh: "节奏", en: "pace", example: "Preferisco un ritmo lento.", exampleZh: "我更喜欢慢节奏。" },
+      { it: "scoprire", zh: "发现", en: "to discover", example: "Scopro un bar nascosto.", exampleZh: "我发现一家隐藏的咖啡馆。" },
+      { it: "perdersi", zh: "迷路/闲逛", en: "to get lost", example: "A volte è bello perdersi.", exampleZh: "有时迷路也很好。" }
+    ]
+  },
+  {
+    key: "health",
+    related: ["science", "sport"],
+    labelZh: "健康",
+    themeIt: "Benessere senza ossessione",
+    setting: "Salute · corpo · abitudini",
+    focus: ["sonno", "energia", "cura"],
+    place: "nelle abitudini di tutti i giorni",
+    issue: "il modo di prendersi cura di sé senza diventare ossessivi",
+    issueChoice: "Prendersi cura di sé senza ossessione.",
+    actor: "Paolo",
+    other: "Irene",
+    actorDesc: "una persona che prova ad ascoltare meglio il corpo",
+    simpleObservation: "dormire poco cambia umore e concentrazione",
+    simpleReason: "la salute entra in ogni giornata",
+    tension: "ascoltare il corpo non significa preoccuparsi di tutto",
+    example: "una settimana in cui il sonno peggiora e il lavoro diventa più faticoso",
+    proposal: "osservare i segnali e chiedere aiuto quando servono",
+    proposalChoice: "Osservare i segnali e chiedere aiuto se serve.",
+    stakes: "la cura quotidiana previene problemi più grandi, ma richiede equilibrio",
+    vocab: [
+      { it: "sonno", zh: "睡眠", en: "sleep", example: "Il sonno influenza l'umore.", exampleZh: "睡眠影响心情。" },
+      { it: "energia", zh: "精力", en: "energy", example: "Oggi ho poca energia.", exampleZh: "我今天精力不多。" },
+      { it: "sintomo", zh: "症状", en: "symptom", example: "Il sintomo dura da due giorni.", exampleZh: "症状持续两天了。" },
+      { it: "pausa", zh: "休息", en: "break", example: "Faccio una pausa lontano dallo schermo.", exampleZh: "我离开屏幕休息一下。" },
+      { it: "equilibrio", zh: "平衡", en: "balance", example: "Cerco un equilibrio più sano.", exampleZh: "我寻找更健康的平衡。" },
+      { it: "prevenire", zh: "预防", en: "to prevent", example: "Dormire bene aiuta a prevenire problemi.", exampleZh: "睡好有助于预防问题。" }
+    ]
+  },
+  {
+    key: "relationships",
+    related: ["daily", "social"],
+    labelZh: "关系生活",
+    themeIt: "Relazioni e confini",
+    setting: "Relazioni · vita quotidiana · comunicazione",
+    focus: ["amicizia", "confini", "ascolto"],
+    place: "nelle chat e negli incontri",
+    issue: "il modo di dire sì e no senza rovinare una relazione",
+    issueChoice: "Dire sì e no in modo chiaro.",
+    actor: "Elena",
+    other: "Nico",
+    actorDesc: "una persona che vuole comunicare con più chiarezza",
+    simpleObservation: "un messaggio breve può essere gentile ma poco chiaro",
+    simpleReason: "le relazioni hanno bisogno di parole precise",
+    tension: "evitare un conflitto a volte crea più confusione",
+    example: "un invito rifiutato con una proposta alternativa",
+    proposal: "dire il motivo in modo breve e proporre un'altra possibilità",
+    proposalChoice: "Dire il motivo e proporre un'alternativa.",
+    stakes: "la gentilezza funziona meglio quando non nasconde quello che pensiamo davvero",
+    vocab: [
+      { it: "confine", zh: "边界", en: "boundary", example: "Imparo a rispettare i miei confini.", exampleZh: "我学习尊重自己的边界。" },
+      { it: "invito", zh: "邀请", en: "invitation", example: "Grazie per l'invito.", exampleZh: "谢谢邀请。" },
+      { it: "alternativa", zh: "替代方案", en: "alternative", example: "Propongo un'alternativa.", exampleZh: "我提出一个替代方案。" },
+      { it: "ascoltare", zh: "倾听", en: "to listen", example: "Ascoltare non significa essere sempre d'accordo.", exampleZh: "倾听不等于总是同意。" },
+      { it: "chiarire", zh: "澄清", en: "to clarify", example: "Vorrei chiarire una cosa.", exampleZh: "我想澄清一件事。" },
+      { it: "rispetto", zh: "尊重", en: "respect", example: "Il rispetto rende la conversazione più facile.", exampleZh: "尊重让对话更容易。" }
+    ]
+  },
+  {
+    key: "social",
+    related: ["tech", "relationships"],
+    labelZh: "社交平台",
+    themeIt: "Social, commenti e identità",
+    setting: "Social · linguaggio · identità",
+    focus: ["commenti", "immagine", "comunità"],
+    place: "sotto un post molto commentato",
+    issue: "il modo in cui ci presentiamo online",
+    issueChoice: "Il modo in cui ci presentiamo online.",
+    actor: "Arianna",
+    other: "Leo",
+    actorDesc: "una persona che osserva le discussioni online",
+    simpleObservation: "un commento può sembrare più aggressivo di quanto vogliamo",
+    simpleReason: "online mancano spesso tono e contesto",
+    tension: "cerchiamo autenticità, ma curiamo molto l'immagine",
+    example: "un post personale che riceve consigli non richiesti",
+    proposal: "scrivere commenti più brevi, chiari e rispettosi",
+    proposalChoice: "Scrivere commenti più chiari e rispettosi.",
+    stakes: "la conversazione digitale costruisce relazioni, ma può anche consumarle",
+    vocab: [
+      { it: "commento", zh: "评论", en: "comment", example: "Il commento è troppo aggressivo.", exampleZh: "这个评论太攻击性了。" },
+      { it: "profilo", zh: "个人资料", en: "profile", example: "Aggiorno il mio profilo.", exampleZh: "我更新个人资料。" },
+      { it: "immagine", zh: "形象", en: "image", example: "Online curiamo molto l'immagine.", exampleZh: "网上我们很在意形象。" },
+      { it: "autentico", zh: "真实的", en: "authentic", example: "Vorrei essere più autentica.", exampleZh: "我想更真实一点。" },
+      { it: "reazione", zh: "反应", en: "reaction", example: "La reazione è stata immediata.", exampleZh: "反应很快。" },
+      { it: "discussione", zh: "讨论", en: "discussion", example: "La discussione diventa lunga.", exampleZh: "讨论变得很长。" }
+    ]
+  },
+  {
+    key: "daily",
+    related: ["relationships", "food"],
+    labelZh: "日常",
+    themeIt: "Piccole routine, lingua vera",
+    setting: "Vita quotidiana · abitudini · autonomia",
+    focus: ["routine", "imprevisti", "autonomia"],
+    place: "tra casa, lavoro e commissioni",
+    issue: "le piccole decisioni che organizzano una giornata",
+    issueChoice: "Le piccole decisioni quotidiane.",
+    actor: "Caty",
+    other: "Marta",
+    actorDesc: "una persona che vuole rendere la giornata più gestibile",
+    simpleObservation: "una routine funziona solo se lascia spazio agli imprevisti",
+    simpleReason: "la lingua serve anche per risolvere cose pratiche",
+    tension: "un piano troppo rigido crolla appena cambia qualcosa",
+    example: "una mattina con una commissione, una telefonata e un ritardo",
+    proposal: "preparare poche frasi utili per situazioni ricorrenti",
+    proposalChoice: "Preparare poche frasi utili.",
+    stakes: "l'autonomia linguistica nasce spesso da scene piccole, ripetute molte volte",
+    vocab: [
+      { it: "commissione", zh: "杂事/办事", en: "errand", example: "Devo fare una commissione.", exampleZh: "我得办一件事。" },
+      { it: "ritardo", zh: "迟到/延误", en: "delay", example: "Il treno è in ritardo.", exampleZh: "火车晚点了。" },
+      { it: "appuntamento", zh: "约会/预约", en: "appointment", example: "Ho un appuntamento alle cinque.", exampleZh: "我五点有预约。" },
+      { it: "risolvere", zh: "解决", en: "to solve", example: "Posso risolvere il problema domani.", exampleZh: "我明天可以解决这个问题。" },
+      { it: "organizzare", zh: "安排", en: "to organize", example: "Organizzo la giornata in anticipo.", exampleZh: "我提前安排一天。" },
+      { it: "imprevisto", zh: "意外情况", en: "unexpected event", example: "C'è stato un imprevisto.", exampleZh: "发生了一个意外情况。" }
+    ]
+  }
+];
+
+const CARD_VARIANTS = [
+  {
+    id: "notizia",
+    labelZh: "新闻",
+    make: (topic) => ({
+      themeIt: topic.themeIt,
+      issue: topic.issue,
+      issueChoice: topic.issueChoice,
+      simpleObservation: topic.simpleObservation,
+      tension: topic.tension,
+      example: topic.example,
+      proposal: topic.proposal,
+      proposalChoice: topic.proposalChoice,
+      stakes: topic.stakes,
+      focus: topic.focus
+    })
+  },
+  {
+    id: "storia",
+    labelZh: "人物故事",
+    make: (topic) => ({
+      themeIt: `${topic.themeIt}: una storia`,
+      issue: `una storia personale legata a ${topic.issue}`,
+      issueChoice: `Una storia personale legata a ${topic.issue}.`,
+      simpleObservation: `${topic.actor} vive una situazione concreta: ${topic.simpleObservation}`,
+      tension: `la questione diventa più chiara quando passa attraverso una scelta personale: ${topic.tension}`,
+      example: `${topic.actor} si trova davanti a ${topic.example}`,
+      proposal: `raccontare l'esperienza e poi collegarla a ${topic.proposal}`,
+      proposalChoice: "Collegare esperienza personale e tema generale.",
+      stakes: `una storia individuale mostra che ${topic.stakes}`,
+      focus: [topic.focus[0], "storia personale", "dettagli concreti"]
+    })
+  },
+  {
+    id: "pratica",
+    labelZh: "实用选择",
+    make: (topic) => ({
+      themeIt: `${topic.themeIt}: scelte pratiche`,
+      issue: `una decisione concreta su ${topic.issue}`,
+      issueChoice: `Una decisione concreta su ${topic.issue}.`,
+      simpleObservation: `una scelta quotidiana rende visibile che ${topic.simpleObservation}`,
+      tension: `la scelta pratica sembra piccola, ma rivela che ${topic.tension}`,
+      example: `una decisione da prendere: ${topic.example}`,
+      proposal: `trasformare ${topic.proposal} in un'azione concreta`,
+      proposalChoice: "Trasformare un'idea in un'azione concreta.",
+      stakes: `nelle scelte pratiche si vede che ${topic.stakes}`,
+      focus: [topic.focus[0], "scelta pratica", "autonomia"]
+    })
+  },
+  {
+    id: "dibattito",
+    labelZh: "观点争论",
+    make: (topic) => ({
+      themeIt: `${topic.themeIt}: due opinioni`,
+      issue: `il dibattito su ${topic.issue}`,
+      issueChoice: `Il dibattito su ${topic.issue}.`,
+      simpleObservation: `le persone non sono d'accordo perché ${topic.simpleReason}`,
+      tension: `nel dibattito emergono due esigenze: ${topic.tension}`,
+      example: `una discussione pubblica su ${topic.example}`,
+      proposal: `distinguere i fatti dalle reazioni e poi ${topic.proposal}`,
+      proposalChoice: "Distinguere fatti, reazioni e proposte.",
+      stakes: `un dibattito utile parte dal fatto che ${topic.stakes}`,
+      focus: [topic.focus[0], "opinioni", "argomentazione"]
+    })
+  },
+  {
+    id: "trend",
+    labelZh: "趋势观察",
+    make: (topic) => ({
+      themeIt: `${topic.themeIt}: cosa sta cambiando`,
+      issue: `un cambiamento recente in ${topic.issue}`,
+      issueChoice: `Un cambiamento recente in ${topic.issue}.`,
+      simpleObservation: `negli ultimi tempi si nota che ${topic.simpleObservation}`,
+      tension: `il cambiamento è graduale, ma mostra che ${topic.tension}`,
+      example: `un segnale del cambiamento: ${topic.example}`,
+      proposal: `osservare il cambiamento e ${topic.proposal}`,
+      proposalChoice: "Osservare il cambiamento e proporre una risposta.",
+      stakes: `il cambiamento conta perché ${topic.stakes}`,
+      focus: [topic.focus[0], "tendenze", "cambiamento"]
+    })
+  },
+  {
+    id: "intervista",
+    labelZh: "采访",
+    make: (topic) => ({
+      themeIt: `${topic.themeIt}: intervista breve`,
+      issue: `un'intervista su ${topic.issue}`,
+      issueChoice: `Un'intervista su ${topic.issue}.`,
+      simpleObservation: `una persona intervistata racconta che ${topic.simpleObservation}`,
+      tension: `nell'intervista emerge che ${topic.tension}`,
+      example: `una domanda concreta su ${topic.example}`,
+      proposal: `fare domande più precise e poi ${topic.proposal}`,
+      proposalChoice: "Fare domande più precise prima di concludere.",
+      stakes: `la voce di chi parla mostra che ${topic.stakes}`,
+      focus: [topic.focus[0], "intervista", "voce personale"]
+    })
+  },
+  {
+    id: "dati",
+    labelZh: "数据解读",
+    make: (topic) => ({
+      themeIt: `${topic.themeIt}: leggere i dati`,
+      issue: `i dati disponibili su ${topic.issue}`,
+      issueChoice: `I dati disponibili su ${topic.issue}.`,
+      simpleObservation: `un dato semplice fa vedere che ${topic.simpleObservation}`,
+      tension: `i numeri aiutano, ma non spiegano da soli che ${topic.tension}`,
+      example: `un dato o un caso legato a ${topic.example}`,
+      proposal: `usare i dati senza dimenticare le persone e ${topic.proposal}`,
+      proposalChoice: "Usare i dati senza dimenticare il contesto.",
+      stakes: `leggere i dati con attenzione è importante perché ${topic.stakes}`,
+      focus: [topic.focus[0], "dati", "contesto"]
+    })
+  },
+  {
+    id: "luogo",
+    labelZh: "地点现场",
+    make: (topic) => ({
+      themeIt: `${topic.themeIt}: dal luogo`,
+      issue: `una scena concreta che mostra ${topic.issue}`,
+      issueChoice: `Una scena concreta che mostra ${topic.issue}.`,
+      simpleObservation: `in un luogo preciso si nota che ${topic.simpleObservation}`,
+      tension: `guardando la scena da vicino si capisce che ${topic.tension}`,
+      example: `una scena osservata: ${topic.example}`,
+      proposal: `partire dai dettagli del luogo e poi ${topic.proposal}`,
+      proposalChoice: "Partire dai dettagli concreti del luogo.",
+      stakes: `il luogo rende visibile che ${topic.stakes}`,
+      focus: [topic.focus[0], "luogo", "osservazione"]
+    })
+  },
+  {
+    id: "futuro",
+    labelZh: "未来假设",
+    make: (topic) => ({
+      themeIt: `${topic.themeIt}: scenari futuri`,
+      issue: `che cosa potrebbe succedere con ${topic.issue}`,
+      issueChoice: `Che cosa potrebbe succedere con ${topic.issue}.`,
+      simpleObservation: `se la tendenza continua, ${topic.simpleObservation}`,
+      tension: `il futuro è incerto proprio perché ${topic.tension}`,
+      example: `uno scenario possibile a partire da ${topic.example}`,
+      proposal: `prepararsi meglio e ${topic.proposal}`,
+      proposalChoice: "Immaginare scenari e preparare una risposta.",
+      stakes: `pensare al futuro serve perché ${topic.stakes}`,
+      focus: [topic.focus[0], "futuro", "ipotesi"]
+    })
+  },
+  {
+    id: "errore",
+    labelZh: "误区澄清",
+    make: (topic) => ({
+      themeIt: `${topic.themeIt}: un equivoco comune`,
+      issue: `un equivoco frequente su ${topic.issue}`,
+      issueChoice: `Un equivoco frequente su ${topic.issue}.`,
+      simpleObservation: `molti semplificano il tema, anche se ${topic.simpleObservation}`,
+      tension: `l'equivoco nasce perché ${topic.tension}`,
+      example: `un esempio frainteso: ${topic.example}`,
+      proposal: `correggere l'equivoco e ${topic.proposal}`,
+      proposalChoice: "Correggere un equivoco e spiegare meglio.",
+      stakes: `chiarire l'equivoco conta perché ${topic.stakes}`,
+      focus: [topic.focus[0], "equivoco", "chiarimento"]
+    })
+  }
+];
+
+function buildAdaptiveCards() {
+  return ADAPTIVE_TOPICS.flatMap((topic) =>
+    CARD_VARIANTS.flatMap((variant) =>
+      LEVEL_ORDER.map((level) => buildAdaptiveCard(applyCardVariant(topic, variant), level))
+    )
+  );
+}
+
+function applyCardVariant(topic, variant) {
+  return {
+    ...topic,
+    ...variant.make(topic),
+    primaryTopic: topic.key,
+    related: topic.related,
+    variantId: variant.id,
+    variantLabelZh: variant.labelZh,
+    vocab: topic.vocab
+  };
+}
+
+function levelIndex(level) {
+  const index = LEVEL_ORDER.indexOf(level);
+  return index >= 0 ? index : LEVEL_ORDER.indexOf("B1");
+}
+
+function nextLevel(level) {
+  return LEVEL_ORDER[Math.min(LEVEL_ORDER.length - 1, levelIndex(level) + 1)] || "B1";
+}
+
+function levelIsAtLeast(level, threshold) {
+  return levelIndex(level) >= levelIndex(threshold);
+}
+
+function compactListeningIssue(topic) {
+  return topic.focus?.[0] || topic.issue.split(/\s+/).slice(0, 4).join(" ");
+}
+
+function naturalizeItalianText(text) {
+  return String(text || "")
+    .replace(/\ba l'/gi, "all'")
+    .replace(/\ba il\b/gi, "al")
+    .replace(/\ba lo\b/gi, "allo")
+    .replace(/\ba la\b/gi, "alla")
+    .replace(/\ba i\b/gi, "ai")
+    .replace(/\ba gli\b/gi, "agli")
+    .replace(/\ba le\b/gi, "alle")
+    .replace(/\bdi l'/gi, "dell'")
+    .replace(/\bdi il\b/gi, "del")
+    .replace(/\bdi lo\b/gi, "dello")
+    .replace(/\bdi la\b/gi, "della")
+    .replace(/\bdi i\b/gi, "dei")
+    .replace(/\bdi gli\b/gi, "degli")
+    .replace(/\bdi le\b/gi, "delle");
+}
+
+function cleanListeningResult(result) {
+  return {
+    ...result,
+    lines: result.lines.map(([speaker, line]) => [speaker, naturalizeItalianText(line)]),
+    choices: result.choices.map(naturalizeItalianText)
+  };
+}
+
+function buildAdaptiveListening(topic, level) {
+  const focus = compactListeningIssue(topic);
+
+  if (level === "A1+") {
+    return cleanListeningResult({
+      lines: [
+        [topic.actor, `Ciao, oggi penso a ${focus}.`],
+        [topic.other, "È un tema vicino a noi?"],
+        [topic.actor, `Sì, perché ${topic.simpleReason}.`],
+        [topic.other, "Va bene, ne parliamo con calma."]
+      ],
+      question: "Di che cosa parlano?",
+      choices: [topic.issueChoice, "Di un film comico.", "Di un problema di pronuncia."],
+      answer: 0,
+      dictationIndex: 0
+    });
+  }
+
+  if (level === "A2") {
+    return cleanListeningResult({
+      lines: [
+        [topic.actor, `Oggi ho letto una notizia su ${focus}.`],
+        [topic.other, `Ne parlano anche ${topic.place}.`],
+        [topic.actor, `Mi interessa perché ${topic.simpleReason}.`],
+        [topic.other, `Forse possiamo ${topic.proposal}.`]
+      ],
+      question: "Qual è il tema principale della conversazione?",
+      choices: [topic.issueChoice, "Un programma televisivo leggero.", "Un problema di pronuncia."],
+      answer: 0,
+      dictationIndex: 1
+    });
+  }
+
+  if (level === "A2+") {
+    return cleanListeningResult({
+      lines: [
+        [topic.actor, `Ho letto qualcosa su ${topic.issue}.`],
+        [topic.other, `Sì, se ne parla spesso ${topic.place}.`],
+        [topic.actor, `Mi sembra importante perché ${topic.simpleReason}.`],
+        [topic.other, `Per esempio, penso a ${topic.example}.`],
+        [topic.actor, `Allora possiamo ${topic.proposal}.`]
+      ],
+      question: "Qual è il tema principale della conversazione?",
+      choices: [topic.issueChoice, "Un programma televisivo leggero.", "Un problema di pronuncia."],
+      answer: 0,
+      dictationIndex: 2
+    });
+  }
+
+  if (!levelIsAtLeast(level, "B2")) {
+    return cleanListeningResult({
+      lines: [
+        [topic.actor, `Sto seguendo ${topic.issue}.`],
+        [topic.other, `All'inizio sembra lontano, ma ${topic.simpleObservation}.`],
+        [topic.actor, `Mi colpisce che ${topic.tension}.`],
+        [topic.other, `Un esempio concreto è ${topic.example}.`],
+        [topic.actor, `Per questo sarebbe utile ${topic.proposal}.`]
+      ],
+      question: "Qual è il tema principale della conversazione?",
+      choices: [topic.issueChoice, "Un programma televisivo leggero.", "Un problema di pronuncia."],
+      answer: 0,
+      dictationIndex: 2
+    });
+  }
+
+  const lines = [
+    [topic.actor, `Stavo leggendo un articolo su ${topic.issue}; mi sembra interessante proprio perché ${topic.tension}.`],
+    [topic.other, `Sì, e il modo in cui se ne parla ${topic.place} mostra quanto il contesto cambi la percezione del problema.`],
+    [topic.actor, `Il rischio è ridurre tutto a uno slogan. Un esempio rende la situazione più concreta: ${topic.example}.`],
+    [topic.other, `Forse una risposta seria dovrebbe partire dai dettagli e poi chiedersi come ${topic.proposal}.`],
+    [topic.actor, `Esatto: ${topic.stakes}; senza questa sfumatura la discussione resta superficiale.`]
+  ];
+
+  if (levelIsAtLeast(level, "B2+")) {
+    lines.push([topic.other, "Mi interessa anche capire quali voci restano fuori dal discorso e perché."]);
+  }
+
+  return cleanListeningResult({
+    lines,
+    question: "Quale sfumatura emerge nella conversazione?",
+    choices: [
+      `${capitalizeFirst(topic.tension)}.`,
+      "Il tema è solo un passatempo senza conseguenze.",
+      "La cosa più importante è la pronuncia delle parole."
+    ],
+    answer: 0,
+    dictationIndex: 2
+  });
+}
+
+function buildAdaptiveCard(topic, level) {
+  const levelInfo = LEVEL_CONTENT[level] || LEVEL_CONTENT.B1;
+  const readingLevel = nextLevel(level);
+  const readingInfo = LEVEL_CONTENT[readingLevel] || LEVEL_CONTENT.B1;
+  const advanced = levelIsAtLeast(level, "B1+");
+  const listening = buildAdaptiveListening(topic, level);
+
+  return {
+    theme: `${topic.labelZh} · ${topic.variantLabelZh || "主题"} · ${levelInfo.label}`,
+    themeIt: topic.themeIt,
+    setting: `${topic.setting} · ${levelInfo.readingLength}`,
+    grammar: levelInfo.grammar,
+    focus: topic.focus,
+    primaryTopic: topic.primaryTopic || topic.key,
+    topics: [topic.key, ...(topic.related || [])],
+    level,
+    vocab: topic.vocab,
+    listening: {
+      title: `${topic.themeIt}: una conversazione`,
+      ...listening
+    },
+    reading: {
+      title: `${topic.themeIt}: lettura ${readingLevel}`,
+      paragraphs: buildAdaptiveReading(topic, level, readingLevel),
+      questions: [
+        { q: "Qual è il tema principale del testo?", choices: [topic.issueChoice, "Una ricetta senza ingredienti.", "Un viaggio organizzato male."], answer: 0 },
+        { q: "Che cosa suggerisce il testo?", choices: [topic.proposalChoice, "Evitare ogni discussione.", "Memorizzare solo parole isolate."], answer: 0 }
+      ]
+    },
+    speaking: {
+      prompt: `Parla di ${topic.issue}. Usa almeno un esempio personale e una frase con ${advanced ? "tuttavia" : "perché"}.`,
+      starters: advanced
+        ? ["Da un lato...", "Tuttavia...", "Un esempio concreto è..."]
+        : ["Secondo me...", "Per esempio...", "Mi sembra importante perché..."]
+    },
+    writing: {
+      prompt: `Scrivi ${levelInfo.writingTarget} su ${topic.issue}.`,
+      starters: advanced
+        ? ["Negli ultimi anni...", "Il punto non è solo...", "Per questo credo che..."]
+        : ["Oggi vorrei parlare di...", "Secondo me...", "Per esempio..."]
+    },
+    upgrade: {
+      base: `Il tema è importante.`,
+      pattern: advanced ? "Aggiungi tesi, contrasto e proposta." : "Aggiungi perché, esempio e opinione personale.",
+      sample: advanced
+        ? `Il tema è importante perché ${topic.tension}; tuttavia, una risposta utile dovrebbe ${topic.proposal}.`
+        : `Il tema è importante perché ${topic.simpleReason}; per esempio, ${topic.example}.`
+    },
+    wildcard: advanced
+      ? `Riassumi ${topic.issue} usando tuttavia e per questo.`
+      : `Riassumi ${topic.issue} in due frasi semplici.`
+  };
+}
+
+function buildAdaptiveReading(topic, level, readingLevel) {
+  if (!levelIsAtLeast(readingLevel, "B1")) {
+    return [
+      `Negli ultimi giorni ${topic.place} si parla di ${topic.issue}. ${capitalizeFirst(topic.actorDesc)} nota che ${topic.simpleObservation}.`,
+      `Il tema è vicino alla vita quotidiana, perché ${topic.simpleReason}. Per questo non basta leggere il titolo: serve capire la situazione.`,
+      `Una soluzione possibile è ${topic.proposal}. Anche una scelta piccola può rendere la conversazione più chiara.`
+    ];
+  }
+
+  if (!levelIsAtLeast(readingLevel, "B2")) {
+    return [
+      `${capitalizeFirst(topic.actorDesc)} segue con attenzione ${topic.issue}. All'inizio il tema sembra lontano, ma diventa più concreto quando si osservano gli effetti nelle abitudini di ogni giorno.`,
+      `Il punto centrale è che ${topic.tension}. Per esempio, ${topic.example}. Questo dettaglio mostra che dietro una notizia o una scelta personale c'è spesso una rete di cause.`,
+      `Anche se non esiste una soluzione semplice, il testo suggerisce di ${topic.proposal}. In questo modo la discussione diventa meno impulsiva e più utile.`,
+      `${capitalizeFirst(topic.stakes)}. Proprio per questo, leggere con calma aiuta a distinguere i fatti, le emozioni e le opinioni.`
+    ];
+  }
+
+  return [
+    `${capitalizeFirst(topic.issue)} non è soltanto un argomento da titolo: è un modo per osservare come cambiano le abitudini, le priorità e il linguaggio pubblico. ${capitalizeFirst(topic.actorDesc)} lo capisce quando una questione apparentemente generale entra in una scena concreta.`,
+    `La tensione sta qui: ${topic.tension}. Da una parte c'è il bisogno di risposte rapide; dall'altra, la realtà procede per dettagli, eccezioni e compromessi. ${capitalizeFirst(topic.example)} rende visibile questa complessità meglio di molte dichiarazioni astratte.`,
+    `Per questo una lettura più attenta non cerca solo "che cosa è successo", ma anche chi parla, quali parole sceglie e quali interessi restano sullo sfondo. ${capitalizeFirst(topic.stakes)}, e ignorarlo significa perdere una parte importante del testo.`,
+    `Una proposta ragionevole sarebbe ${topic.proposal}. Non risolve tutto, ma sposta la conversazione da una reazione immediata a una forma di responsabilità più concreta.`
+  ];
+}
+
+function capitalizeFirst(value) {
+  const text = String(value || "");
+  return text ? `${text.charAt(0).toUpperCase()}${text.slice(1)}` : "";
+}
+
+CARDS.push(...buildAdaptiveCards());
+
 const CORE_LEXICON = [
   { it: "bar", zh: "咖啡馆/吧台", en: "cafe / bar", example: "Ci vediamo al bar vicino alla stazione.", exampleZh: "我们在车站附近的咖啡馆见。" },
   { it: "barista", zh: "咖啡师/吧台服务员", en: "barista", example: "Il barista prepara un cappuccino.", exampleZh: "咖啡师做一杯卡布奇诺。" },
@@ -1670,6 +2683,12 @@ function dailyIndex() {
   return Math.floor(random() * CARDS.length);
 }
 
+function dailyPublicDomainId() {
+  if (!PUBLIC_DOMAIN_CORPUS.length) return "";
+  const index = hashString(`${dateKey}-corpus-pubblico`) % PUBLIC_DOMAIN_CORPUS.length;
+  return PUBLIC_DOMAIN_CORPUS[index].id;
+}
+
 function defaultState() {
   return {
     mode: "standard",
@@ -1685,7 +2704,7 @@ function defaultState() {
     corpusType: "letteratura",
     corpusSource: "",
     corpusText: "",
-    publicDomainId: PUBLIC_DOMAIN_CORPUS[0]?.id || "",
+    publicDomainId: dailyPublicDomainId(),
     voiceURI: "",
     selfChecks: {}
   };
@@ -1710,10 +2729,33 @@ function currentCard() {
   return CARDS[state.cardIndex] || CARDS[0];
 }
 
+function cardMatchesTopics(card) {
+  if (!profile.topics?.length) return true;
+  const primaryTopic = card.primaryTopic || card.topics?.[0];
+  return primaryTopic ? profile.topics.includes(primaryTopic) : false;
+}
+
+function cardMatchesLevel(card) {
+  const target = levelIndex(profile.level);
+  const cardLevel = levelIndex(card.level || "B1");
+  return cardLevel === target;
+}
+
 function eligibleCards() {
-  if (!profile.topics?.length) return CARDS;
-  const matches = CARDS.filter((card) => card.topics?.some((topic) => profile.topics.includes(topic)));
-  return matches.length ? matches : CARDS;
+  const exact = CARDS.filter((card) => cardMatchesTopics(card) && cardMatchesLevel(card));
+  if (exact.length) return exact;
+
+  const topicMatches = CARDS.filter(cardMatchesTopics);
+  if (topicMatches.length) return topicMatches;
+
+  const levelMatches = CARDS.filter(cardMatchesLevel);
+  return levelMatches.length ? levelMatches : CARDS;
+}
+
+function ensureCurrentCardFitsProfile() {
+  const card = currentCard();
+  if (cardMatchesTopics(card) && cardMatchesLevel(card)) return;
+  state.cardIndex = dailyProfileCardIndex();
 }
 
 function dailyProfileCardIndex() {
@@ -1732,15 +2774,16 @@ function escapeHtml(value) {
 }
 
 function render() {
+  ensureCurrentCardFitsProfile();
   const card = currentCard();
   const mode = MODES[state.mode];
   els.todayLabel.textContent = dateLabel;
   renderDailyExpression();
   renderProfile();
   els.themeTitle.textContent = `${card.theme} / ${card.themeIt}`;
-  els.themeMeta.textContent = `${card.setting} · ${card.grammar} · ${profile.level}`;
+  els.themeMeta.textContent = `${card.setting} · ${card.grammar} · ${card.level || profile.level}`;
   els.focusBadges.innerHTML = card.focus.map((item) => `<span class="badge">${escapeHtml(item)}</span>`).join("");
-  els.modeHint.textContent = mode.hint;
+  els.modeHint.textContent = `${mode.hint} · 当前范围 ${eligibleCards().length} 张卡片`;
 
   renderModeButtons();
   renderChecklist();
@@ -2062,8 +3105,7 @@ function renderReading(card) {
 }
 
 function readingPracticeLevel() {
-  const index = Math.max(0, LEVEL_ORDER.indexOf(profile.level));
-  return LEVEL_ORDER[Math.min(LEVEL_ORDER.length - 1, index + 1)] || "B1";
+  return nextLevel(profile.level);
 }
 
 function renderSpeaking(card, mode) {
@@ -2294,52 +3336,229 @@ function selectedPublicDomainEntry() {
 function activePublicDomainEntry() {
   const entry = PUBLIC_DOMAIN_CORPUS.find((item) => item.id === state.publicDomainId);
   if (!entry) return null;
-  return state.corpusText?.trim() === entry.text.trim() ? entry : null;
+  return state.corpusSource?.startsWith(publicDomainSourceLabel(entry)) ? entry : null;
 }
 
 function publicDomainSourceLabel(entry) {
   return `${entry.author}, ${entry.title} (${entry.year}) · ${entry.sourceName}`;
 }
 
+function wikisourceTitleFromUrl(sourceUrl) {
+  try {
+    const url = new URL(sourceUrl);
+    if (!url.hostname.endsWith("wikisource.org")) return "";
+    const prefix = "/wiki/";
+    if (!url.pathname.startsWith(prefix)) return "";
+    return decodeURIComponent(url.pathname.slice(prefix.length)).replace(/_/g, " ");
+  } catch {
+    return "";
+  }
+}
+
+function publicDomainModeLabel(entry) {
+  if (entry.sourceName === "Wikisource" && entry.wikisourceTitle) {
+    return "可在线从 Wikisource 正文随机抽段";
+  }
+  if (entry.fullTextUrl) {
+    const cached = entry.segments?.length || 0;
+    return cached > 3
+      ? `Project Gutenberg 缓存 ${cached} 段，可尝试在线全文`
+      : "可尝试在线全文随机抽段";
+  }
+  return `本地摘录池 ${entry.segments.length} 段`;
+}
+
 function updatePublicDomainMeta() {
   if (!els.publicDomainMeta || !els.publicDomainSelect) return;
   const entry = selectedPublicDomainEntry();
   if (!entry) {
-    els.publicDomainMeta.textContent = "内置短摘录，适合直接生成精读练习。";
+    els.publicDomainMeta.textContent = "先选择作品，再从这本作品里载入今日段落或随机段落。";
     return;
   }
+  const mode = publicDomainModeLabel(entry);
   els.publicDomainMeta.innerHTML = `
-    <span>${escapeHtml(entry.level)} · ${escapeHtml(entry.year)} · ${escapeHtml(entry.note)}</span>
+    <span>${escapeHtml(entry.level)} · ${escapeHtml(entry.year)} · ${escapeHtml(mode)} · ${escapeHtml(entry.note)}</span>
     <a href="${escapeHtml(entry.sourceUrl)}" target="_blank" rel="noreferrer">来源</a>
   `;
 }
 
-function loadPublicDomainExcerpt(autoAnalyze = true) {
+async function loadPublicDomainExcerpt(autoAnalyze = true, randomize = false) {
   const entry = selectedPublicDomainEntry();
   if (!entry) return;
+  setPublicDomainStatus(randomize ? "正在从这本书随机抽段..." : "正在载入这本书的今日段落...");
+  const excerpt = await pickPublicDomainExcerpt(entry, randomize);
   state.publicDomainId = entry.id;
   state.corpusType = entry.type;
-  state.corpusSource = publicDomainSourceLabel(entry);
-  state.corpusText = entry.text;
+  state.corpusSource = `${publicDomainSourceLabel(entry)} · ${excerpt.source}`;
+  state.corpusText = excerpt.text;
   els.corpusType.value = entry.type;
   els.corpusSource.value = state.corpusSource;
-  els.corpusText.value = entry.text;
+  els.corpusText.value = excerpt.text;
   saveState();
   if (autoAnalyze) analyzeCorpus();
+  setPublicDomainStatus(`${entry.level} · ${entry.year} · ${excerpt.source} · ${entry.note}`);
 }
 
-function randomPublicDomainExcerpt() {
-  if (!PUBLIC_DOMAIN_CORPUS.length) return;
-  const currentIndex = PUBLIC_DOMAIN_CORPUS.findIndex((item) => item.id === els.publicDomainSelect.value);
-  const random = seededRandom(hashString(`${Date.now()}-${Math.random()}`));
-  let nextIndex = Math.floor(random() * PUBLIC_DOMAIN_CORPUS.length);
-  if (PUBLIC_DOMAIN_CORPUS.length > 1 && nextIndex === currentIndex) {
-    nextIndex = (nextIndex + 1) % PUBLIC_DOMAIN_CORPUS.length;
+function setPublicDomainStatus(message) {
+  if (!els.publicDomainMeta) return;
+  const entry = selectedPublicDomainEntry();
+  const sourceLink = entry?.sourceUrl
+    ? ` <a href="${escapeHtml(entry.sourceUrl)}" target="_blank" rel="noreferrer">来源</a>`
+    : "";
+  els.publicDomainMeta.innerHTML = `<span>${escapeHtml(message)}</span>${sourceLink}`;
+}
+
+async function pickPublicDomainExcerpt(entry, randomize = false) {
+  const seed = randomize
+    ? `${Date.now()}-${Math.random()}-${entry.id}`
+    : `${dateKey}-${entry.id}`;
+  const corpus = await paragraphPoolForPublicDomainEntry(entry);
+  const paragraphs = corpus.paragraphs.length ? corpus.paragraphs : [entry.text];
+  const random = seededRandom(hashString(seed));
+  const index = Math.floor(random() * paragraphs.length);
+  return {
+    text: paragraphs[index],
+    source: `${corpus.source} ${index + 1}/${paragraphs.length}`
+  };
+}
+
+async function paragraphPoolForPublicDomainEntry(entry) {
+  const onlineParagraphs = await onlineParagraphsForEntry(entry);
+  if (onlineParagraphs.length) {
+    return {
+      paragraphs: onlineParagraphs,
+      source: `${entry.sourceName} 全文随机段落`
+    };
   }
-  els.publicDomainSelect.value = PUBLIC_DOMAIN_CORPUS[nextIndex].id;
-  state.publicDomainId = els.publicDomainSelect.value;
-  updatePublicDomainMeta();
-  saveState();
+
+  const paragraphs = entry.segments || [entry.text];
+  return {
+    paragraphs,
+    source: entry.sourceName === "Project Gutenberg" && paragraphs.length > 3
+      ? "Project Gutenberg 缓存段落"
+      : "本地摘录池"
+  };
+}
+
+async function onlineParagraphsForEntry(entry) {
+  if (publicDomainTextCache.has(entry.id)) return publicDomainTextCache.get(entry.id);
+
+  if (entry.sourceName === "Wikisource" && entry.wikisourceTitle) {
+    try {
+      const paragraphs = await fetchWikisourceParagraphs(entry);
+      if (paragraphs.length) {
+        publicDomainTextCache.set(entry.id, paragraphs);
+        return paragraphs;
+      }
+    } catch (error) {
+      console.warn(`Wikisource text fetch failed for ${entry.wikisourceTitle}; trying fallback.`, error);
+    }
+  }
+
+  for (const url of entry.fullTextUrls) {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const rawText = await response.text();
+      const paragraphs = paragraphPoolFromText(stripGutenbergBoilerplate(rawText), entry);
+      if (paragraphs.length) {
+        publicDomainTextCache.set(entry.id, paragraphs);
+        return paragraphs;
+      }
+    } catch (error) {
+      console.warn(`Project Gutenberg text fetch failed for ${url}; trying fallback.`, error);
+    }
+  }
+
+  publicDomainTextCache.set(entry.id, []);
+  return [];
+}
+
+async function fetchWikisourceParagraphs(entry) {
+  const params = new URLSearchParams({
+    action: "parse",
+    page: entry.wikisourceTitle,
+    prop: "text",
+    format: "json",
+    redirects: "1",
+    origin: "*"
+  });
+  const response = await fetch(`https://it.wikisource.org/w/api.php?${params}`);
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  const data = await response.json();
+  if (data.error) throw new Error(data.error.info || data.error.code);
+  const html = data.parse?.text?.["*"] || "";
+  const plainText = plainTextFromHtml(html);
+  return paragraphPoolFromText(plainText, entry);
+}
+
+function plainTextFromHtml(html) {
+  if (typeof DOMParser === "undefined") {
+    return String(html || "").replace(/<[^>]+>/g, " ");
+  }
+  const doc = new DOMParser().parseFromString(String(html || ""), "text/html");
+  doc
+    .querySelectorAll("style, script, table, sup, .reference, .mw-editsection, .noprint, .ws-noexport")
+    .forEach((node) => node.remove());
+  return doc.body?.innerText || "";
+}
+
+function stripGutenbergBoilerplate(text) {
+  let clean = String(text || "").replace(/\r/g, "");
+  const startMatch = clean.match(/\*\*\*\s*START OF (?:THE|THIS) PROJECT GUTENBERG EBOOK[\s\S]*?\*\*\*/i);
+  if (startMatch?.index !== undefined) clean = clean.slice(startMatch.index + startMatch[0].length);
+  const endIndex = clean.search(/\*\*\*\s*END OF (?:THE|THIS) PROJECT GUTENBERG EBOOK/i);
+  if (endIndex >= 0) clean = clean.slice(0, endIndex);
+  return clean;
+}
+
+function stripSourceStartMarker(text, source = {}) {
+  const marker = source.startMarker;
+  if (!marker) return text;
+  const index = text.toLowerCase().indexOf(marker.toLowerCase());
+  return index >= 0 ? text.slice(index + marker.length) : text;
+}
+
+function corpusParagraphChunks(paragraph) {
+  const maxWords = 210;
+  if (normalizeItalian(paragraph).length <= maxWords) return [paragraph];
+
+  const sentences = paragraph.match(/[^.!?;:]+[.!?;:]*/g) || [paragraph];
+  const chunks = [];
+  let current = "";
+
+  sentences.forEach((sentence) => {
+    const cleanSentence = sentence.trim();
+    if (!cleanSentence) return;
+    const candidate = current ? `${current} ${cleanSentence}` : cleanSentence;
+    if (normalizeItalian(candidate).length > maxWords && current) {
+      chunks.push(current);
+      current = cleanSentence;
+    } else {
+      current = candidate;
+    }
+  });
+
+  if (current) chunks.push(current);
+  return chunks;
+}
+
+function paragraphPoolFromText(text, source = {}) {
+  return stripSourceStartMarker(String(text || ""), source)
+    .split(/\n\s*\n+/)
+    .map((paragraph) => paragraph
+      .replace(/\n+/g, " ")
+      .replace(/\s+/g, " ")
+      .trim())
+    .flatMap(corpusParagraphChunks)
+    .filter((paragraph) => {
+      const words = normalizeItalian(paragraph);
+      if (words.length < 70 || words.length > 210) return false;
+      if (!/[àèéìòù]/i.test(paragraph) && !/\b(che|non|per|con|una|del|della)\b/i.test(paragraph)) return false;
+      if (/^(capitolo|chapter|indice|nota|prefazione)\b/i.test(paragraph)) return false;
+      if (/project gutenberg|copyright|www\.gutenberg\.org|ebook/i.test(paragraph)) return false;
+      return true;
+    });
 }
 
 function analyzeCorpus() {
@@ -2930,11 +4149,8 @@ document.querySelector("#correctWritingBtn").addEventListener("click", () => {
   renderCorrection(els.writingFeedback, els.writingInput.value, "writing");
 });
 document.querySelector("#analyzeCorpusBtn").addEventListener("click", analyzeCorpus);
-document.querySelector("#loadPublicDomainBtn").addEventListener("click", () => loadPublicDomainExcerpt(true));
-document.querySelector("#randomPublicDomainBtn").addEventListener("click", () => {
-  randomPublicDomainExcerpt();
-  loadPublicDomainExcerpt(true);
-});
+document.querySelector("#loadPublicDomainBtn").addEventListener("click", () => loadPublicDomainExcerpt(true, false));
+document.querySelector("#randomPublicDomainBtn").addEventListener("click", () => loadPublicDomainExcerpt(true, true));
 els.publicDomainSelect.addEventListener("change", () => {
   state.publicDomainId = els.publicDomainSelect.value;
   updatePublicDomainMeta();
@@ -2972,7 +4188,10 @@ els.profileName.addEventListener("input", () => {
 
 els.profileLevel.addEventListener("change", () => {
   profile.level = els.profileLevel.value;
+  state.cardIndex = dailyProfileCardIndex();
+  resetWorkFields();
   saveProfile();
+  saveState();
   render();
 });
 
@@ -2983,7 +4202,11 @@ els.topicGrid.addEventListener("change", (event) => {
   if (input.checked) selected.add(input.dataset.topic);
   else selected.delete(input.dataset.topic);
   profile.topics = [...selected];
+  state.cardIndex = dailyProfileCardIndex();
+  resetWorkFields();
   saveProfile();
+  saveState();
+  render();
 });
 
 document.addEventListener("change", (event) => {
