@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caty, practice Italian</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-block">
+          <p class="eyebrow">Italiano quotidiano</p>
+          <h1><span id="userNameGreeting">Caty</span>, it's time to practice Italian!</h1>
+          <p class="topline" id="dailyExpression">Piano piano si va lontano. · 慢慢来，才能走得远。</p>
+        </div>
+        <div class="top-actions">
+          <div class="date-pill" id="todayLabel"></div>
+          <button class="ghost-button" id="loadTodayBtn" type="button">今日卡片</button>
+          <button class="primary-button" id="randomBtn" type="button">换一张</button>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <aside class="daily-card" aria-label="今日任务">
+          <div class="scene-strip" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <section class="panel theme-panel">
+            <div class="panel-label">Tema del giorno</div>
+            <h2 id="themeTitle"></h2>
+            <p id="themeMeta" class="muted"></p>
+            <div class="badge-row" id="focusBadges"></div>
+          </section>
+
+          <section class="panel compact-panel profile-panel">
+            <div class="section-heading">
+              <h2>个人设置</h2>
+              <span class="muted">影响随机主题</span>
+            </div>
+            <label class="field-label">
+              名字
+              <input id="profileName" type="text" placeholder="Caty" />
+            </label>
+            <label class="field-label">
+              当前级别
+              <select id="profileLevel">
+                <option value="A1+">A1+</option>
+                <option value="A2">A2</option>
+                <option value="A2+">A2+</option>
+                <option value="B1">B1</option>
+                <option value="B1+">B1+</option>
+                <option value="B2">B2</option>
+                <option value="B2+">B2+</option>
+              </select>
+            </label>
+            <div class="field-label">
+              感兴趣的话题
+              <div class="topic-grid" id="topicGrid"></div>
+            </div>
+          </section>
+
+          <section class="panel compact-panel">
+            <div class="section-heading">
+              <h2>强度</h2>
+              <span id="modeHint" class="muted"></span>
+            </div>
+            <div class="segmented" role="group" aria-label="练习强度">
+              <button data-mode="gentle" type="button">轻量</button>
+              <button data-mode="standard" type="button">标准</button>
+              <button data-mode="stretch" type="button">挑战</button>
+            </div>
+          </section>
+
+          <section class="panel compact-panel">
+            <div class="section-heading">
+              <h2>进度</h2>
+              <div class="progress-wheel" id="progressWheel"><span id="progressText">0%</span></div>
+            </div>
+            <div class="checklist" id="dailyChecklist"></div>
+          </section>
+
+          <section class="panel compact-panel">
+            <div class="section-heading">
+              <h2>今日表达</h2>
+              <button class="ghost-button small-button" id="toggleRecallBtn" type="button">遮住意大利语</button>
+            </div>
+            <div class="vocab-list" id="vocabList"></div>
+          </section>
+
+          <section class="panel compact-panel">
+            <div class="section-heading">
+              <h2>单词本</h2>
+              <button class="ghost-button small-button" id="clearWordbookBtn" type="button">清空</button>
+            </div>
+            <div class="wordbook-list" id="wordbookList"></div>
+          </section>
+        </aside>
+
+        <section class="practice-area">
+          <nav class="skill-tabs" aria-label="练习模块">
+            <button data-tab="listening" type="button">听力</button>
+            <button data-tab="reading" type="button">阅读</button>
+            <button data-tab="corpus" type="button">语料</button>
+            <button data-tab="speaking" type="button">口语</button>
+            <button data-tab="writing" type="button">写作</button>
+            <button data-tab="review" type="button">复盘</button>
+          </nav>
+
+          <section class="lookup-popover" id="lookupPopover" aria-live="polite" hidden>
+            <div>
+              <p class="eyebrow">Dizionario</p>
+              <h2 id="lookupWord">点击意大利语单词查词</h2>
+            </div>
+            <div class="lookup-body" id="lookupBody">
+              <p class="muted">阅读和听力文本里带下划线的词可以点击。已收录词会显示中英意对照和例句。</p>
+            </div>
+            <div class="inline-actions">
+              <button class="primary-button" id="addLookupBtn" type="button" disabled>加入单词本</button>
+              <button class="ghost-button" id="closeLookupBtn" type="button">关闭</button>
+            </div>
+          </section>
+
+          <section class="practice-panel is-active" id="listeningPanel" data-panel="listening">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Ascolto</p>
+                <h2 id="listeningTitle"></h2>
+              </div>
+              <label class="done-toggle">
+                <input type="checkbox" data-done="listening" />
+                <span>完成</span>
+              </label>
+            </div>
+
+            <div class="audio-controls">
+              <button class="primary-button" id="playSlowBtn" type="button">慢速播放</button>
+              <button class="ghost-button" id="playNormalBtn" type="button">正常播放</button>
+              <button class="ghost-button" id="pauseSpeechBtn" type="button">暂停</button>
+              <button class="icon-button" id="stopSpeechBtn" type="button" aria-label="停止播放">■</button>
+              <button class="ghost-button" id="toggleTranscriptBtn" type="button">隐藏文本</button>
+            </div>
+
+            <div class="voice-row">
+              <label class="voice-picker">
+                <span>朗读声音</span>
+                <select id="voiceSelect"></select>
+              </label>
+              <button class="ghost-button" id="refreshVoicesBtn" type="button">重新检测</button>
+              <p class="voice-status" id="voiceStatus"></p>
+            </div>
+
+            <div class="transcript" id="listeningTranscript"></div>
+
+            <div class="exercise-grid">
+              <section class="mini-panel">
+                <h3>听写 2-3 句</h3>
+                <p id="dictationCue" class="muted"></p>
+                <textarea id="dictationInput" rows="5" placeholder="听完后写下你听到的连续几句"></textarea>
+                <div class="accent-toolbar" data-for="dictationInput"></div>
+                <div class="inline-actions">
+                  <button class="ghost-button" id="playDictationBtn" type="button">播放听写片段</button>
+                  <button class="primary-button" id="checkDictationBtn" type="button">查看匹配度</button>
+                </div>
+                <p id="dictationResult" class="feedback"></p>
+              </section>
+
+              <section class="mini-panel">
+                <h3>理解问题</h3>
+                <p id="listeningQuestion"></p>
+                <div class="choice-list" id="listeningChoices"></div>
+              </section>
+            </div>
+          </section>
+
+          <section class="practice-panel" id="readingPanel" data-panel="reading">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Lettura</p>
+                <h2 id="readingTitle"></h2>
+                <p class="muted" id="readingLevelNote"></p>
+              </div>
+              <label class="done-toggle">
+                <input type="checkbox" data-done="reading" />
+                <span>完成</span>
+              </label>
+            </div>
+
+            <article class="reading-text" id="readingText"></article>
+            <div class="exercise-grid">
+              <section class="mini-panel">
+                <h3>Domande</h3>
+                <div id="readingQuestions"></div>
+              </section>
+              <section class="mini-panel">
+                <h3>句子升级</h3>
+                <p id="upgradeBase" class="quote-line"></p>
+                <p id="upgradePattern" class="muted"></p>
+                <textarea id="upgradeInput" rows="4" placeholder="把简单句扩展成 2-3 句"></textarea>
+                <div class="accent-toolbar" data-for="upgradeInput"></div>
+                <div class="inline-actions">
+                  <button class="primary-button" id="correctUpgradeBtn" type="button">批改升级句</button>
+                </div>
+                <div class="correction-box" id="upgradeFeedback"></div>
+              </section>
+            </div>
+          </section>
+
+          <section class="practice-panel" id="speakingPanel" data-panel="speaking">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Parlato</p>
+                <h2>输出练习</h2>
+              </div>
+              <label class="done-toggle">
+                <input type="checkbox" data-done="speaking" />
+                <span>完成</span>
+              </label>
+            </div>
+
+            <section class="prompt-block">
+              <p id="speakingPrompt"></p>
+              <div class="starter-list" id="speakingStarters"></div>
+            </section>
+
+            <div class="speaking-tools">
+              <div class="timer-box">
+                <span id="timerDisplay">01:00</span>
+                <div class="inline-actions">
+                  <button class="primary-button" id="startTimerBtn" type="button">开始计时</button>
+                  <button class="ghost-button" id="resetTimerBtn" type="button">重置</button>
+                </div>
+              </div>
+              <div class="recorder-box">
+                <div class="inline-actions">
+                  <button class="primary-button" id="recordBtn" type="button">开始录音</button>
+                  <button class="ghost-button" id="stopRecordBtn" type="button" disabled>停止</button>
+                </div>
+                <audio id="recordedAudio" controls></audio>
+                <p id="recordingStatus" class="muted"></p>
+              </div>
+            </div>
+
+            <textarea id="speakingNotes" rows="5" placeholder="口语草稿、录音后发现的问题、想下次重说的句子"></textarea>
+            <div class="accent-toolbar" data-for="speakingNotes"></div>
+
+            <div class="self-check" id="speakingCheck"></div>
+          </section>
+
+          <section class="practice-panel" id="corpusPanel" data-panel="corpus">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Corpus reale</p>
+                <h2>语料精读</h2>
+              </div>
+              <button class="primary-button" id="analyzeCorpusBtn" type="button">生成练习</button>
+            </div>
+
+            <section class="corpus-grid">
+              <div class="mini-panel">
+                <h3>来源</h3>
+                <label class="field-label">
+                  类型
+                  <select id="corpusType">
+                    <option value="letteratura">Letteratura</option>
+                    <option value="notizia">Notizia</option>
+                    <option value="opinione">Opinione</option>
+                    <option value="documentario">Documentario</option>
+                    <option value="social">Social / discussione</option>
+                  </select>
+                </label>
+                <label class="field-label">
+                  标题或来源
+                  <input id="corpusSource" type="text" placeholder="Calvino, Ferrante, La Repubblica..." />
+                </label>
+                <div class="public-domain-pack">
+                  <div class="section-heading">
+                    <h3>公版语料包</h3>
+                    <button class="ghost-button small-button" id="randomPublicDomainBtn" type="button">随机</button>
+                  </div>
+                  <label class="field-label">
+                    选择片段
+                    <select id="publicDomainSelect"></select>
+                  </label>
+                  <p class="muted" id="publicDomainMeta"></p>
+                  <button class="primary-button" id="loadPublicDomainBtn" type="button">载入并生成练习</button>
+                </div>
+              </div>
+
+              <div class="mini-panel">
+                <h3>片段</h3>
+                <textarea id="corpusText" rows="10" placeholder="粘贴 80-250 词意大利语片段"></textarea>
+                <div class="accent-toolbar" data-for="corpusText"></div>
+              </div>
+            </section>
+
+            <section class="mini-panel corpus-output">
+              <h3>分析与练习</h3>
+              <div id="corpusOutput" class="corpus-output-body">
+                <p class="muted">粘贴片段后生成语法点、关键词和内容问题。</p>
+              </div>
+            </section>
+          </section>
+
+          <section class="practice-panel" id="writingPanel" data-panel="writing">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Scrittura</p>
+                <h2>短写作</h2>
+              </div>
+              <label class="done-toggle">
+                <input type="checkbox" data-done="writing" />
+                <span>完成</span>
+              </label>
+            </div>
+
+            <section class="prompt-block">
+              <p id="writingPrompt"></p>
+              <div class="starter-list" id="writingStarters"></div>
+            </section>
+
+            <textarea id="writingInput" rows="10" placeholder="今天写 5-10 句。先写出来，再检查冠词、动词和介词。"></textarea>
+            <div class="accent-toolbar" data-for="writingInput"></div>
+            <div class="writing-stats">
+              <span id="wordCount">0 parole</span>
+              <span id="sentenceCount">0 frasi</span>
+              <span id="targetWords"></span>
+            </div>
+            <div class="inline-actions">
+              <button class="primary-button" id="correctWritingBtn" type="button">批改写作</button>
+            </div>
+            <div class="correction-box" id="writingFeedback"></div>
+
+            <div class="self-check" id="writingCheck"></div>
+          </section>
+
+          <section class="practice-panel" id="reviewPanel" data-panel="review">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Ripasso</p>
+                <h2>今日复盘</h2>
+              </div>
+              <button class="primary-button" id="exportBtn" type="button">导出记录</button>
+            </div>
+
+            <div class="review-grid">
+              <section class="mini-panel">
+                <h3>随机小挑战</h3>
+                <p id="wildcardText"></p>
+              </section>
+              <section class="mini-panel">
+                <h3>下次更自然</h3>
+                <textarea id="reviewNotes" rows="6" placeholder="写下一个下次想说得更自然的表达"></textarea>
+                <div class="accent-toolbar" data-for="reviewNotes"></div>
+              </section>
+            </div>
+
+            <section class="mini-panel export-preview">
+              <h3>记录预览</h3>
+              <pre id="exportPreview"></pre>
+            </section>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js?v=corpus-answers-lookup" defer></script>
+  </body>
+</html>
